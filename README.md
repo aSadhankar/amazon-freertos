@@ -1,3 +1,7 @@
+## Steps to run
+
+1. Copy tools/aws_config_quick_start/configure.json.templ to tools/aws_config_quick_start/configure.json and fill it out.
+
 ## Getting Started
 
 For more information on Amazon FreeRTOS, refer to the [Getting Started section of Amazon FreeRTOS webpage](https://aws.amazon.com/freertos).
