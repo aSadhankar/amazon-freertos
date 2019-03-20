@@ -25,22 +25,22 @@ Reference: https://docs.aws.amazon.com/freertos/latest/userguide/getting_started
 
 2. Checkout this repository and run the above 'Steps to get setup'
 
-3. Update tools/aws_config_quick_start/configure.json
+3. Update ```tools/aws_config_quick_start/configure.json```
 
-4. Ensure the afr_source_dir is set to the full path on your computer
+4. Ensure the ```afr_source_dir``` is set to the full path on your computer
 
-5. Make sure you’re signed in to the AWS command line tool for the next step (using ‘aws configure’ and enter AWS Access Id and Secret Key)
+5. Make sure you’re signed in to the AWS command line tool for the next step (using ```aws configure``` from the command line and enter AWS Access Id and Secret Key)
 
-6. Run ‘python SetupAWS.py setup’ from tools/aws_config_quick_start/
+6. Run ```python SetupAWS.py setup``` from ```tools/aws_config_quick_start/```
 
 7. This should create certificates and register the device with Amazon IOT
 
 ### Running
 
 1. If you’re debugging, you can subscribe to a MQTT Topic
-2. Run make menuconfig from <BASE_FOLDER>/demos/espressif/esp32_devkitc_esp_wrover_kit/make
-3. Configure stuff
-4. Run make flash monitor from same folder
+2. Run ```make menuconfig``` from ```<BASE_FOLDER>/demos/espressif/esp32_devkitc_esp_wrover_kit/make```
+3. Configure stuff - but mainly set the Serial Port. You can find you serial port in the terminal by typing ```ls /dev/cu*```.
+4. Run ```make flash monitor``` from same folder
 
 ### If everything’s working already and you’re just changing WIFI
 
