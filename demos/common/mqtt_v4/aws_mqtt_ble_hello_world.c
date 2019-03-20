@@ -60,6 +60,11 @@
 #include "aws_demo_config.h"
 #include "aws_clientcredential.h"
 
+/* ADC.h */
+#include <driver/adc.h>
+
+#include "esp_system.h"
+
 /**
  * @brief Transport types supported for MQTT Echo demo.
  */
@@ -479,6 +484,9 @@ void prvMqttPublishTask( void* pvParam )
     char cMessage[ echoDemoPUBLISH_DATA_LENGTH ];
     size_t xMessageLength;
 
+    /* SETUP FOR HALL SENSOR READING */
+    adc1_config_width(ADC_WIDTH_BIT_12);
+
     TickType_t xPublishRetryDelay = pdMS_TO_TICKS( echoDemoPUBLISH_TIMEOUT_DELAY_MS );
     TickType_t xPublishDelay = pdMS_TO_TICKS( echoDemoPUBLISH_INTERVAL_MS );
 
@@ -500,11 +508,12 @@ void prvMqttPublishTask( void* pvParam )
             {
                 if( xNetworkConnected )
                 {
+                    int hallReading = hall_sensor_read();
                     xMessageLength = snprintf(
                             cMessage,
                             echoDemoPUBLISH_DATA_LENGTH,
                             echoDemoPUBLISH_DATA,
-                            ( int ) ( ulPublishCount + 1 ) );
+                            ( int ) ( hallReading ) );
 
                     xMqttStatus = prxPublishMQTTMessage( cMessage, xMessageLength );
 
