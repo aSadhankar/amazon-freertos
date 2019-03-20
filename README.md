@@ -1,6 +1,11 @@
 ## Steps to run
 
-1. Copy tools/aws_config_quick_start/configure.json.templ to tools/aws_config_quick_start/configure.json and fill it out.
+1. Copy tools/aws_config_quick_start/configure.json.templ to 
+        tools/aws_config_quick_start/configure.json and fill it out.
+
+2. Copy demos/espressif/esp32_devkitc_esp_wrover_kit/make/sdkconfig.templ to
+        demos/espressif/esp32_devkitc_esp_wrover_kit/make/sdkconfig
+
 
 ## Getting Started
 
