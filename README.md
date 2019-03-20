@@ -1,16 +1,16 @@
 ## Steps to get setup
 
-1. Copy tools/aws_config_quick_start/configure.json.templ to 
-        tools/aws_config_quick_start/configure.json and fill it out.
+1. Copy ```tools/aws_config_quick_start/configure.json.templ``` to 
+        ```tools/aws_config_quick_start/configure.json``` and fill it out.
 
-2. Copy demos/espressif/esp32_devkitc_esp_wrover_kit/make/sdkconfig.templ to
-        demos/espressif/esp32_devkitc_esp_wrover_kit/make/sdkconfig
+2. Copy ```demos/espressif/esp32_devkitc_esp_wrover_kit/make/sdkconfig.templ``` to
+        ```demos/espressif/esp32_devkitc_esp_wrover_kit/make/sdkconfig```
 
-3. Copy demos/common/include/aws_clientcredential.h.templ to
-        demos/common/include/aws_clientcredential.h
+3. Copy ```demos/common/include/aws_clientcredential.h.templ``` to
+        ```demos/common/include/aws_clientcredential.h```
 
-4. Copy demos/common/include/aws_clientcredential_keys.h.templ to
-        demos/common/include/aws_clientcredential_keys.h
+4. Copy ```demos/common/include/aws_clientcredential_keys.h.templ``` to
+        ```demos/common/include/aws_clientcredential_keys.h```
 
 ## Steps to run
 
