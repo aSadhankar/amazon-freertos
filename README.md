@@ -1,4 +1,4 @@
-## Steps to run
+## Steps to get setup
 
 1. Copy tools/aws_config_quick_start/configure.json.templ to 
         tools/aws_config_quick_start/configure.json and fill it out.
@@ -11,6 +11,43 @@
 
 4. Copy demos/common/include/aws_clientcredential_keys.h.templ to
         demos/common/include/aws_clientcredential_keys.h
+
+## Steps to run
+
+Reference: https://docs.aws.amazon.com/freertos/latest/userguide/getting_started_espressif.html
+
+### SETUP
+
+1. If not starting from scratch, you might have to delete (using the IoT Core Web Console)
+  - IoT Things
+  - Policies
+  - Certificates
+
+2. Checkout this repository and run the above 'Steps to get setup'
+
+3. Update tools/aws_config_quick_start/configure.json
+
+4. Ensure the afr_source_dir is set to the full path on your computer
+
+5. Make sure you’re signed in to the AWS command line tool for the next step (using ‘aws configure’ and enter AWS Access Id and Secret Key)
+
+6. Run ‘python SetupAWS.py setup’ from tools/aws_config_quick_start/
+
+7. This should create certificates and register the device with Amazon IOT
+
+### Running
+
+1. If you’re debugging, you can subscribe to a MQTT Topic
+2. Run make menuconfig from <BASE_FOLDER>/demos/espressif/esp32_devkitc_esp_wrover_kit/make
+3. Configure stuff
+4. Run make flash monitor from same folder
+
+### If everything’s working already and you’re just changing WIFI
+
+1. You should be able to just edit aws_clientcredential.h
+
+
+
 
 ## Getting Started
 
