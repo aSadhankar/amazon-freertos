@@ -1,3 +1,5 @@
 # Ignore uncrustify backups
 *.unc*
 doc/html/*
+*.pyc
+*.DS_Store
