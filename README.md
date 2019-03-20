@@ -6,6 +6,11 @@
 2. Copy demos/espressif/esp32_devkitc_esp_wrover_kit/make/sdkconfig.templ to
         demos/espressif/esp32_devkitc_esp_wrover_kit/make/sdkconfig
 
+3. Copy demos/common/include/aws_clientcredential.h.templ to
+        demos/common/include/aws_clientcredential.h
+
+4. Copy demos/common/include/aws_clientcredential_keys.h.templ to
+        demos/common/include/aws_clientcredential_keys.h
 
 ## Getting Started
 
