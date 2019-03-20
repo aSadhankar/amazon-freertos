@@ -585,6 +585,7 @@ void prvMqttPublishTask( void* pvParam )
 
 void vStartMQTTBLEEchoDemo( void )
 {
+    configPRINTF( ( "Starting!" ) );
 
     BaseType_t xRet = pdTRUE;
 
